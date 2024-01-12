@@ -9,3 +9,6 @@
 <template>
   <div>login</div>
 </template>
+<script lang="ts" setup>
+console.log('dev独有的环境变量:' + import.meta.env.VITE_APP_TITLE);
+</script>

@@ -27,14 +27,29 @@
       "#/*": [
         "types/*"
       ]
-    } //路径映射,配合别名使用
+    }, //路径映射,配合别名使用
+    "useDefineForClassFields": true,
+    "noLib": false,
+    "sourceMap": true,
+    "types": [
+      "vite/client",
+      "unplugin-icons/types/vue",
+      "element-plus/global"
+    ],
+    "allowSyntheticDefaultImports": true /* 允许默认导入 */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
   },
   //需要检测的文件
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/assets/type/**/*.d.ts",
+    "mock/**/*.ts",
+    "vite.config.ts"
   ],
   "references": [
     {
@@ -43,6 +58,15 @@
   ], //为文件进行不同配置
   "types": [
     "web-bluetooth",
-    "other-types"
+    "other-types",
+    "minimist",
+    "vite/client",
+    "unplugin-icons/types/vue",
+    "element-plus/global"
   ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.js"
+  ]
 }
